@@ -39,11 +39,13 @@ public final class StarterApplication {
                 + 1977);
         LOGGER.severe("This is really bad");
         LOGGER.warning("I've got a bad feeling about this");
-        LOGGER.info("Primative typs must be wrapped as the Logger class methods only accept objects.");
-        LOGGER.info(String.valueOf(1977));
+        LOGGER.info(() -> "Primative typs must be wrapped the Logger class "
+                + "methods only accept objects.");
+        LOGGER.info(String.valueOf(42));
         final int aNumber = 42;
         LOGGER.info(String.valueOf(aNumber));
 
-        // System.out.println("System.out.println should not be used unless this is an actual console application!");
+        // System.out.println should not be used unless this is an actual console application!
+        // Maybe not even then.
     }
 }
